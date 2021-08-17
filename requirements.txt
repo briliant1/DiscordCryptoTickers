@@ -1,0 +1,4 @@
+dnspython
+discord.py
+httpx
+discord-py-slash-command
