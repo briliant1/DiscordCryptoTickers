@@ -36,7 +36,7 @@ def get_coingecko_data():
 
 
 def value_of_currency_to_show():
-    return int(get_coingecko_data()[main_currency_api][currency_to_show])
+    return float(get_coingecko_data()[main_currency_api][currency_to_show])
 
 
 def watch_secondary_currencies():
@@ -45,7 +45,7 @@ def watch_secondary_currencies():
     for second_currency in split_second_currency:
         data = {
             "symbol": second_currency,
-            "value": int(get_coingecko_data()[main_currency_api][second_currency])
+            "value": float(get_coingecko_data()[main_currency_api][second_currency])
         }
         currencies.append(data)
     return currencies
